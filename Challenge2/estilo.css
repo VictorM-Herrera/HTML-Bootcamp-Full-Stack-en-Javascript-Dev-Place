@@ -1,0 +1,93 @@
+*{
+    margin:0; 
+    padding:auto;
+    box-sizing: border-box;
+    
+}
+a{
+    color: white;
+}
+
+h1{
+    color: blue;
+    font-family: Verdana, arial;
+    font-size: 300%;
+}
+.text-box p{
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+    text-align:justify;
+}
+.text-box{
+    display: inline-block;
+    width: 1300px;
+    position: fixed;
+}
+.text-box h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.formulario-ingreso{
+    background-color: rgb(103, 177, 199);
+    width: 500px;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.autos-usados{
+    text-align: center;
+}
+.autos-usados img{
+    width: 500px;
+    margin-top: 10px;
+}
+
+/*NAV:*/
+.nav-box{
+    /*padding-top: 2px;
+    padding-bottom: 2px;*/
+    background: rgb(81, 156, 156);
+    overflow: hidden;
+}
+.nav-box nav a{
+    float: left;
+    background-color: rgb(67, 175, 179);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 3em;
+    text-decoration: none;/*quita el subrayado a los links*/
+    font-size: 1em;
+    /*border-radius: 5px;*/
+    margin-left: 5px;
+}
+.nav-box nav a:hover{
+    background-color: rgb(132, 211, 214);
+
+}
+.footer-box{
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: rgb(81, 156, 156);
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+.aside-box{
+    display: flex;
+    height: 10em;
+    margin-left: auto;
+    width: 30%;
+    height: 1000px;
+}
+.aside-box section h2{
+    text-align: center;
+}
+.aside-box aside{
+    background: lightgreen;
+    font-weight: bold;
+    line-height: 2em;
+    text-align: justify;
+}
