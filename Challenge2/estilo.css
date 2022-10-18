@@ -8,12 +8,12 @@ a{
 }
 
 h1{
-    color: blue;
+    color: rgb(0, 0, 255);
     font-family: Verdana, arial;
     font-size: 300%;
 }
 .text-box p{
-    color: red;
+    color: rgba(255, 0, 0, 1);
     font-family: courier;
     font-size: 160%;
     text-align:justify;
@@ -69,15 +69,8 @@ h1{
     background-color: rgb(132, 211, 214);
 
 }
-.footer-box{
-    margin-top: 50px;
-    width: 100%;
-    height: 100px;
-    background: rgb(81, 156, 156);
-    position: absolute;
-    bottom: 0;
-    color: white;
-}
+/*aside*/
+
 .aside-box{
     display: block;
     width: 30%;
@@ -92,4 +85,13 @@ h1{
     font-weight: bold;
     line-height: 2em;
     text-align: justify;
+}
+.footer-box{
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: rgb(81, 156, 156);
+    position: absolute;
+    bottom: 0;
+    color: white;
 }
