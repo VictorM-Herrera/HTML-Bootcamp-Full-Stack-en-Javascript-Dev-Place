@@ -10,9 +10,35 @@ h2{
 p{
     font-family: 'Courier New', Courier, monospace;
 }
+/*Header-NAV*/
 .header-box{
     border: 5px solid red;
-    height: 100px;
+    height: 97px;
+
+}
+.header-title{
+    border: 5px solid blue;
+    height: 30%;
+}
+.nav-box{
+    /*border: 5px solid green;*/
+    display: flex;
+    justify-content: center;
+    background: rgb(99, 95, 95);
+    overflow: hidden;
+    height: auto;
+}
+.nav-box a{
+    color: white;
+    display: block;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 1em;
+    font-size: 1em;
+}
+.nav-box a:hover{
+    background-color: #56ae95;
 }
 /*Profile*/
 #profile-section{
