@@ -1,0 +1,121 @@
+//ficheros:
+//variables:
+$letra-style: 'Courier New', Courier, monospace;
+$letra-color: #d35f86;
+$border-test: red;
+$primary:#56ae95;
+$p-light:#88e0c6;
+$p-dark:#207e67;
+$p-text:#b9f6ca;
+$secondary: #00bfa5;
+$s-light: #5df2d6;
+$s-dark:#008e76;
+$s-text:#004d40;
+
+
+//mixin:
+@mixin borde_personalizado($border-color: $border-test) {
+    border: 5px solid $border-color;
+}
+
+//css:
+* {
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+h2,
+p {
+    font-family: $letra-style;
+}
+
+.header-box {
+   // @include borde_personalizado();
+    height: 7em;
+    header {
+        height: 100%;
+        .header-title {
+           // @include borde_personalizado(blue);
+            height: 50%;
+            background: $p-dark;
+            text-align: center;
+            h2{
+                margin-top: 10px;
+                font-size:xx-large;
+                color: $p-text;
+            }
+        }
+        .nav-box {
+            //@include borde_personalizado(purple);
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            background: $secondary;
+            overflow: hidden;
+
+            a {
+                color: white;
+                display: block;
+                float: left;
+                text-decoration: none;
+                text-align: center;
+                padding: 1em 1em;
+                font-size: 1em;
+                height: 100%;
+                &:hover{
+                    background-color: $p-light;
+                }
+                p{
+                    margin-top: 6px
+                }
+            }
+        }
+    }
+}
+#profile-section{
+    //@include borde_personalizado(green);
+    background-color: $primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .profile{
+        @include borde_personalizado($s-light);
+        box-shadow: 5px 5px 5px $s-text,
+        -5px -5px 5px $s-text;
+        height: 31em;
+        width: 31em;
+        display: grid;
+        grid-column: 3;
+        grid-row: 3;
+        grid-auto-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+        .profile-img{
+            @include borde_personalizado($p-light);
+            height: 100%;
+            background: url(../img/perfil.jpg);
+            width: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            grid-column-start: 2;
+        }
+        .profile-title{
+            grid-column-start: 2;
+            /*border: 5px solid red;*/
+            text-align: center;
+            padding-top: 30px;
+        }
+        .profile-text{
+            grid-column: 1/4;
+            grid-row-start: 3;
+            text-align: justify;
+            /*border: 5px solid red;*/
+            padding-left: 10px;
+            margin: auto;
+        }
+    }
+}

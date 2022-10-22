@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+/*Header-NAV*/
+.header-box{
+    border: 5px solid red;
+    height: 97px;
+
+}
+.header-title{
+    border: 5px solid blue;
+    height: 30%;
+}
+.nav-box{
+    /*border: 5px solid green;*/
+    display: flex;
+    justify-content: center;
+    background: rgb(99, 95, 95);
+    overflow: hidden;
+    height: auto;
+}
+.nav-box a{
+    color: white;
+    display: block;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 1em;
+    font-size: 1em;
+}
+.nav-box a:hover{
+    background-color: #56ae95;
+}
+/*Profile*/
+#profile-section{
+    border: 5px solid #56ae95;
+    display: flex;
+    justify-content: center;
+    
+}
+.profile{
+    border: 5px solid blue;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-column: 3;
+    grid-row: 3;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    
+}
+.profile .profile-img{
+    border: 5px solid cyan;
+    background: url(./img/perfil.jpg);
+    width: auto;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    grid-column-start: 2;
+}
+.profile .profile-title{
+    grid-column-start: 2;
+    /*border: 5px solid red;*/
+    text-align: center;
+    padding-top: 30px;
+}
+.profile .profile-text{
+    grid-column: 1/4;
+    grid-row-start: 3;
+    text-align: justify;
+    /*border: 5px solid red;*/
+    padding-left: 10px;
+    margin: auto;
+
+}
+/*Card*/
+#card-section{
+    border: 5px solid #75bb6e;
+    
+}
+.card-list{
+    border: 5px solid #7a56b7;
+    height: 100px;
+}
+/*About*/
+#about-section{
+    border: 5px solid #907a50;
+}
+.about{
+    border: 5px solid green;
+    height: 100px;
+}
+/*Contact*/
+#contact-section{
+    border: 5px solid #8c4c3d;
+}
+.contact{
+    border: 5px solid cyan;
+    height: 100px;
+}
+/*footer*/
+.footer-box{
+    border: 5px solid purple;
+    height: 100px;
+}
+@media (max-width:375px){
+    .header-box{
+        height: auto;
+    }
+    .nav-box a{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+}
