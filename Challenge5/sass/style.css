@@ -3,7 +3,6 @@
   padding: auto;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow: hidden;
 }
 
 h2,
@@ -12,7 +11,7 @@ p {
 }
 
 .header-box {
-  height: 7em;
+  height: fit-content;
 }
 .header-box header {
   height: 100%;
@@ -43,9 +42,12 @@ p {
   padding: 1em 1em;
   font-size: 1em;
   height: 100%;
+  overflow: hidden;
 }
 .header-box header .nav-box a:hover {
   background-color: #88e0c6;
+  transition: 0.6s;
+  font-size: 17px;
 }
 .header-box header .nav-box a p {
   margin-top: 6px;
@@ -56,10 +58,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 32em;
 }
 #profile-section .profile {
   border: 5px solid #5df2d6;
-  box-shadow: 5px 5px 5px #004d40, -5px -5px 5px #004d40;
+  box-shadow: 5px 0 5px #004d40, -5px 0 5px #004d40;
   height: 31em;
   width: 31em;
   display: grid;
@@ -71,7 +76,8 @@ p {
 #profile-section .profile .profile-img {
   border: 5px solid #88e0c6;
   height: 100%;
-  background: url(../img/perfil.jpg);
+  display: flex;
+  justify-content: center;
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,8 +85,16 @@ p {
   border-radius: 50%;
   grid-column-start: 2;
 }
+#profile-section .profile .profile-img img {
+  display: flex;
+  width: 100%;
+}
 #profile-section .profile .profile-title {
-  grid-column-start: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row-start: 2;
+  grid-column: 1/4;
   /*border: 5px solid red;*/
   text-align: center;
   padding-top: 30px;
@@ -92,6 +106,12 @@ p {
   /*border: 5px solid red;*/
   padding-left: 10px;
   margin: auto;
+}
+#profile-section .profile:hover {
+  transition: 0.3s;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

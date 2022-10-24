@@ -24,7 +24,6 @@ $s-text:#004d40;
     padding: auto;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow: hidden;
 }
 
 h2,
@@ -34,7 +33,7 @@ p {
 
 .header-box {
    // @include borde_personalizado();
-    height: 7em;
+    height: fit-content;
     header {
         height: 100%;
         .header-title {
@@ -65,8 +64,11 @@ p {
                 padding: 1em 1em;
                 font-size: 1em;
                 height: 100%;
+                overflow: hidden;
                 &:hover{
                     background-color: $p-light;
+                    transition: 0.6s;
+                    font-size: 17px;
                 }
                 p{
                     margin-top: 6px
@@ -81,10 +83,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 32em;
     .profile{
         @include borde_personalizado($s-light);
-        box-shadow: 5px 5px 5px $s-text,
-        -5px -5px 5px $s-text;
+        box-shadow: 5px 0 5px $s-text, 
+        -5px 0 5px $s-text;
         height: 31em;
         width: 31em;
         display: grid;
@@ -94,17 +99,27 @@ p {
         grid-template-rows: 33% 33% 33%;
         .profile-img{
             @include borde_personalizado($p-light);
-            height: 100%;
-            background: url(../img/perfil.jpg);
+            height: 100%; 
+            display: flex;
+            justify-content: center;
+            //background: url(../img/perfil.jpg);
             width: auto;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             border-radius: 50%;
             grid-column-start: 2;
+            img{
+                display: flex;
+                width: 100%;
+            }
         }
         .profile-title{
-            grid-column-start: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row-start: 2;
+            grid-column: 1/4;
             /*border: 5px solid red;*/
             text-align: center;
             padding-top: 30px;
@@ -116,6 +131,13 @@ p {
             /*border: 5px solid red;*/
             padding-left: 10px;
             margin: auto;
+        }
+        &:hover{
+            transition: 0.3s;
+            //filter: opacity(0.8);
+            -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+            color: white;
         }
     }
 }
